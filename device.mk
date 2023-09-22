@@ -74,6 +74,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# Set panel refresh rate to 90 Hertz for smoother experience
+TW_FRAMERATE := 120
+
 # TWRP - Specifics
 TW_BACKUP_EXCLUSIONS    := /data/fonts
 TW_THEME                := portrait_hdpi
