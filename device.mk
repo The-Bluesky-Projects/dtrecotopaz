@@ -20,7 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 ALLOW_MISSING_DEPENDENCIES := true
 
 PRODUCT_PACKAGES += \
-    bootctrl.tapas.recovery \
     android.hardware.boot@1.2-impl-qti.recovery \
     miui_prebuilt
 
@@ -71,9 +70,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=erofs \
     POSTINSTALL_OPTIONAL_vendor=true
-
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)

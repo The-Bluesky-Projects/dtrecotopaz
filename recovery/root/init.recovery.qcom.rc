@@ -41,3 +41,8 @@ on property:twrp.modules.loaded=true
     start health-hal-2-1
     start vibratorfeature-hal-service
     umount /firmware
+
+# Haptic feedback
+on property:twrp.modules.loaded=true
+    write /sys/class/leds/vibrator/trigger transient
+    start vibratorfeature-hal-service
