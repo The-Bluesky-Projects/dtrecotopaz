@@ -46,3 +46,7 @@ on property:twrp.modules.loaded=true
 on property:twrp.modules.loaded=true
     write /sys/class/leds/vibrator/trigger transient
     start vibratorfeature-hal-service
+
+# Symlink Flashlight
+on property:twrp.modules.loaded=true
+    symlink /sys/class/leds/led:torch/brightness /system/etc/flashlight/brightness
